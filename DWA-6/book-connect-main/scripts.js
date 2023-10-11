@@ -1,5 +1,5 @@
 // import variables
-/* eslint-disable*/
+/* eslint-disable */
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js'
 
 // variables object literal
