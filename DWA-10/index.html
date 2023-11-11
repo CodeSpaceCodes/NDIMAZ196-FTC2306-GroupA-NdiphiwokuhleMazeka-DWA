@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Counter</title>
+    <link rel="stylesheet" href="./styling.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300;1,700&display=swap" rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.11.2/cdn/shoelace-autoloader.js" defer></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header_title">Tally Counter</h1>
+    </header>
+
+    <main class="counter">
+        <sl-input class="counter_value" data-key="number" readonly value=0></sl-input>
+
+        <div class="counter_container">
+
+            <sl-button class="counter__button
+            counter_button_first" data-key="subtract">-</sl-button>
+            
+            <sl-button class="counter__button" data-key="resetButton">Reset</sl-button>
+            
+            <sl-button class="counter__button" data-key="add">+</sl-button>
+
+        </div>
+    </main>
+    <footer class="footer">
+        Inspired by <a class="footer_link" href="https://tallycount.app/">Tally Counter</a>. Note that this is 
+        just a mere Student Javascript practice project.
+    </footer>
+
+</body>
+
+</html>
