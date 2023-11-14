@@ -2,7 +2,8 @@
 
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js';
 import { props, css } from './props.js';
-import './components/bookPreview.js';
+import './components/BookPreview.js';
+import { Bookpreview } from './components/BookPreview.js';
 
 // Global variables
 let BOOK_SLICE_START_INDEX = 0;
@@ -31,29 +32,33 @@ export const defaultTheme = () =>{
 export const bookPreview = (takeBook) => {
     const pageFregment = document.createDocumentFragment()
     for (const book of takeBook) {
-        // const bookList = document.createElement('book-preview')
+                
+        const { id, title, author, image } = book;
+
+        const bookPreviewElement = new Bookpreview({ id, title, author, image });
+
+        // const picture = book.image;
+        // const title = book.title
+        // const author = authors[book.author]
+        // const id = book.id
+
         
-        const picture = book.image;
-        const title = book.title
-        const author = authors[book.author]
-        const id = book.id
+        // const bookList = document.createElement('button')
+        // bookList.classList = 'preview';
+        // bookList.setAttribute('id', `${id}`);
 
-        const bookList = document.createElement('button')
-        bookList.classList = 'preview';
-        bookList.setAttribute('id', `${id}`);
-
-        bookList.innerHTML = /* html */ `
-            <img
-                class="preview__image"
-                src="${picture}"
-            />
+        // bookList.innerHTML = /* html */ `
+        //     <img
+        //         class="preview__image"
+        //         src="${picture}"
+        //     />
             
-            <div class="preview__info">
-                <h3 class="preview__title">${title}</h3>
-                <div class="preview__author">${author}</div>
-            </div>`;
+        //     <div class="preview__info">
+        //         <h3 class="preview__title">${title}</h3>
+        //         <div class="preview__author">${author}</div>
+        //     </div>`;
 
-        pageFregment.appendChild(bookList);
+        pageFregment.appendChild(bookPreviewElement);
         props.mainListing.dataListItems.appendChild(pageFregment)
     }
     return props.mainListing.dataListItems;
