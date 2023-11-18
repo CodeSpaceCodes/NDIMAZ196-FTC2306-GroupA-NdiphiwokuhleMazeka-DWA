@@ -2,7 +2,7 @@
 
 import { books, authors, genres, BOOKS_PER_PAGE } from './data.js';
 import { props, css } from './props.js';
-import './components/BookPreview.js';
+
 import { Bookpreview } from './components/BookPreview.js';
 
 // Global variables
